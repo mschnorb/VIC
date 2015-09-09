@@ -153,7 +153,6 @@ int main(int argc, char *argv[])
   std::vector<cell_info_struct> cell_data_structs; // Stores physical parameters for each grid cell
   readSoilData(cell_data_structs, filep, filenames, dmy, state);
   state.initGrid(cell_data_structs); // Calculate the grid cell parameters. This is used for NetCDF outputs.
-//  initializeNetCDFOutput(&filenames, out_data_files, &state);
   initializeNetCDFOutput(&filenames, out_data_files, out_data, &state);
 
   /** Read Grid Cell Vegetation Parameters **/
@@ -304,9 +303,6 @@ int initializeCell(cell_info_struct& cell,
 
   if (!state->options.OUTPUT_FORCE) {
     make_in_files(&filep, &filenames, &cell.soil_con, state);
-    /** Read Grid Cell Vegetation Parameters **/
-// MDF: moved call to read_vegparam() to main() to identify the max # of HRUs across all cells, to size the HRU_DIM dimension of the state file
-//    read_vegparam(filep.vegparam, cell, state);
 
     calc_root_fractions(cell.prcp.hruList, &cell.soil_con, state);
 #if LINK_DEBUG
