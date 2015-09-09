@@ -12,7 +12,7 @@
 // and never remove values (just stop using them if necessary).
 namespace StateVariables {
 enum StateMetaDataVariableIndices {
-  NONE = 0,
+	NONE = 0,
   GRID_CELL,
   VEG_TYPE_NUM,
   NUM_BANDS,
@@ -467,9 +467,7 @@ enum StateMetaDataVariableIndices {
   ENERGY_SNOW_FLUX, //new
   ENERGY_GLACIER_FLUX, //new
   ENERGY_DELTACC_GLAC, //new
-
 	GLAC_MASS_BALANCE_INFO, // to store the Glacier Mass Balance information (grid cell num and equation) for use in VIC-RGM integration
-	NUM_GLAC_MASS_BALANCE_INFO_TERMS,
 };
 
 enum StateVariableDimensionId {
