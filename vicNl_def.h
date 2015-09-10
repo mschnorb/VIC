@@ -1598,6 +1598,7 @@ public:
   int NR;  /* array index for atmos struct that indicates the model step average or sum */
   int NF;  /* array index loop counter limit for atmos struct that indicates the SNOW_STEP values */
   int num_gmb_terms; // number of terms to capture Glacier Mass Balance information for a grid cell (see initialize_global)
+  int max_num_HRUs = 0; // the greatest number of HRUs within a grid cell, across all grid cells
   void initialize_global();
   void initGrid(const std::vector<cell_info_struct>& cells);
   void init_global_param(filenames_struct *, const char* global_file_name);
@@ -1607,6 +1608,7 @@ public:
   void set_output_variable_name(std::string, std::string);
   void display_current_settings(int, filenames_struct *);
   void open_debug();
+  void update_max_num_HRUs(int numHRUs);
 };
 
 struct VICException : public std::exception
