@@ -96,7 +96,7 @@ void ProgramState:: build_output_variable_mapping() {
 		{"OUT_EVAP_CANOP", 		VariableMetaData("mm", "EVAP_CANOP", "lwe_thickness_of_water_evaporation_amount_from_canopy", "Net evaporation from canopy interception", "time: mean area: mean")},
 		{"OUT_INFLOW",    		VariableMetaData("mm", "INFLOW", "", "Moisture that reaches top of soil column", "time: mean area: mean")},
 		{"OUT_LAKE_EVAP",    		VariableMetaData("mm", "LAKE_EVAP", "", "Net evaporation from lake surface", "time: mean area: mean")},
-		{"OUT_PET_H20SURF",		VariableMetaData("mm", "PET_H20SURF", "lwe_thickness_of_water_potential_evaporation_amount", "Potential evap from open water", "time: mean area: mean")},
+		{"OUT_PET_H2OSURF",		VariableMetaData("mm", "PET_H20SURF", "lwe_thickness_of_water_potential_evaporation_amount", "Potential evap from open water", "time: mean area: mean")},
 		{"OUT_PET_NATVEG",		VariableMetaData("mm", "PET_NATVEG", "lwe_thickness_of_water_potential_evaporation_amount", "Potential evap (transpiration only) from current vegetation and current canopy resistance", "time: mean area: mean")},
 		{"OUT_PET_SATSOIL",		VariableMetaData("mm", "PET_SATSOIL", "lwe_thickness_of_water_potential_evaporation_amount", "Potential evap from saturated bare soil", "time: mean area: mean")},
 		{"OUT_PET_SHORT",		VariableMetaData("mm", "PET_SHORT", "lwe_thickness_of_water_potential_evaporation_amount", "Potential evap (transpiration only) from short reference crop (grass) ", "time: mean area: mean")},
